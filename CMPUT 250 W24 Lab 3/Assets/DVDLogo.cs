@@ -58,6 +58,10 @@ public class DVDLogo : MonoBehaviour
         else if (newPosition.y<-1*Y_Max){
             FlipDirectionY();
         }
+    
+        float scale = Random.Range(2f, 2.25f);
+        transform.localScale = new Vector3(scale, scale, 1);
+
 
         transform.position += direction*Time.deltaTime*speed;
     }
